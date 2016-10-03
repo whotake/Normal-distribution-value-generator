@@ -150,10 +150,14 @@ function getDataFromForm() {
         text[i] = data.elements[i].value;
     }
 
-    if (validateParams(text)) {
-        var collection = boxMuller(text[0], text[1], text[2]);
-        var distribution = normal(text[1], text[2], collection);
-        var params = "m = " + text[1] + ", σ  = " + text[2];
+    var n = +text[0];
+    var m = +text[1];
+    var sigma = +text[2];
+
+    if (validateParams(n, m, sigma)) {
+        var collection = boxMuller(n, m, sigma);
+        var distribution = normal(m, sigma, collection);
+        var params = "m = " + m + ", σ  = " + sigma;
         document.getElementById('myForms').className = 'form-group has-success';
         document.getElementById('alertError').style.display = 'none';
         document.getElementById("tableParams").innerHTML = params;
@@ -167,9 +171,9 @@ function getDataFromForm() {
 
 }
 
-function validateParams(params) {
-    if (+params[0] >= 10 && +params[0] <= 100 && +params[2] >= -500 && +params[2] <= 500 && params[1] >= 0
-        && params[1] <= 500) {
+function validateParams(n, m, sigma) {
+    if (n >= 10 && n <= 100 && m >= -500 && m <= 500 && sigma >= 0
+        && sigma <= 500) {
         return true;
     }
     return false;
