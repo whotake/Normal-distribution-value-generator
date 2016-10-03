@@ -6,7 +6,7 @@ function getRandomArbitary(min, max)
 describe("validateParams", function() {
 
     function makeTest() {
-        var n = getRandomArbitary(0, 10);
+        var n = getRandomArbitary(0, 9);
         it("при входном " + n + " меньше 10 получаем: " + false, function() {
             assert.equal(validateParams(n, 1, 3), false);
         });
