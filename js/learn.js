@@ -110,7 +110,7 @@ function normal(mu, Sigma, collection) {
     var plotn = [];
 
     start = collection[0] - Math.abs((collection[collection.length - 1] - collection[0]) / 4);
-    step = (+collection[collection.length - 1] +
+    step = (collection[collection.length - 1] +
         Math.abs((collection[collection.length - 1] - collection[0]) / 4) - start) / 100;
 
     for (var i = 0; i <= 100; i++) {
