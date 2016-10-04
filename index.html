@@ -8,7 +8,7 @@
 </head>
 <body>
 <div class="container">
-    <h2 class="center">Моделирование возможных значений случайных величин с нормальным законом распределения.</h2>
+    <h2 class="center">Моделирование возможных значений случайной величины, распределённой по нормальному закону</h2>
     <div class="row">
         <div class="col-sm-4 col-md-offset-4">
             <div class="alert alert-danger center-block" id="alertError" style="display: none">
@@ -22,14 +22,12 @@
             <div class="row">
                 <h4 class="text-center">Введите количество значений для генераций n</h4>
             </div>
-            <div class="row">
-                <label for="amountOfValues" class="col-sm-6 control-label">n
-                    (10 < n < 100)</label>
-                <div class="col-sm-2 col-sm-offset-">
-                    <input type="text" class="form-control" id="amountOfValues" value="10">
-                </div>
+            <label for="amountOfValues" class="col-sm-6 control-label">n
+                (10 < n < 100)</label>
+            <div class="col-sm-2 col-sm-offset-">
+                <input type="text" class="form-control" id="amountOfValues" value="10">
             </div>
-            <div class="row">
+            <div class="col-md-12 col-sm-12">
                 <h4 class="text-center">Введите значения параметров нормального распределения m и σ</h4>
             </div>
             <label for="amountMu" class="col-sm-6 control-label">m (-500 < m < 500)</label>
@@ -48,7 +46,7 @@
     </form>
 
     <div class="col-sm-12" id="result" style="display: none">
-        <h4 class="text-center">Результат генерации значений случайных величин распределённых по закону N(<span
+        <h4 class="text-center">Результат генерации значений случайной величины, распределенной по закону N(<span
                 id="tableParams"></span>)</h4>
 
         <div class="table-responsive">

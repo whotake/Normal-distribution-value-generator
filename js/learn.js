@@ -45,10 +45,7 @@ function draw(params, collection, plotn) {
     $(function () {
         $('#chart1').highcharts({
             title: {
-                text: 'График плотности распределений случайных величин <br> Закон распределения: нормальный'
-            },
-            subtitle: {
-                text: 'Параметры: ' + params
+                text: 'График плотности распределения случайной величины <br> Закон распределения: нормальный <br> Параметры:' + params
             },
             tooltip: {
                 formatter: function () {
